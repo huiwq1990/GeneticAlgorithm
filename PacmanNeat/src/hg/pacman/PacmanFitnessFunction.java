@@ -75,6 +75,25 @@ public class PacmanFitnessFunction implements BulkFitnessFunction, Configurable 
 		}
 	}
 	
+	
+	
+	public void evaluateBest( Chromosome c ) {
+		try {
+			Activator activator = activatorFactory.newActivator( c );
+			// calculate fitness, sum of multiple trials
+			Controller<MOVE> pacManController = new BulkNeatController(activator);
+			Controller<EnumMap<GHOST,MOVE>> ghostController = new StarterGhosts();			
+			
+			PacmanEvaluate.runGameTimed(pacManController, ghostController, true);
+			
+//			c.setFitnessValue((int) fitness);
+		}
+		catch ( Throwable e ) {
+//			logger.warn( "error evaluating chromosome " + c.toString(), e );
+			c.setFitnessValue( 0 );
+		}
+	}
+	
 //	public double singleTrial(Activator activator){
 //	
 //		Controller<MOVE> pacManController = new BulkNeatController(activator);
