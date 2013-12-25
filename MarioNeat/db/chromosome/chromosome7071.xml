@@ -1,0 +1,10 @@
+<chromosome id="7071" primary-parent-id="3838"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="0.6978897816330261"/>
+<connection id="5" src-id="1" dest-id="3" weight="1.4658691674122784"/>
+<neuron id="292" type="hid" activation="sigmoid"/>
+<connection id="293" src-id="2" dest-id="292" weight="5.441671151206828"/>
+<connection id="294" src-id="292" dest-id="3" weight="-0.5674742531119551"/>
+</chromosome>

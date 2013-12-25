@@ -1,0 +1,15 @@
+<chromosome id="6741" primary-parent-id="2889"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="1.7200857808314727"/>
+<connection id="6" src-id="2" dest-id="3" weight="-2.690584635033188"/>
+<neuron id="289" type="hid" activation="sigmoid"/>
+<connection id="290" src-id="1" dest-id="289" weight="1.1703034057746455"/>
+<connection id="291" src-id="289" dest-id="3" weight="3.1044946933417625"/>
+<neuron id="292" type="hid" activation="sigmoid"/>
+<connection id="294" src-id="292" dest-id="3" weight="1.805061873882391"/>
+<neuron id="548" type="hid" activation="sigmoid"/>
+<connection id="549" src-id="2" dest-id="548" weight="1.2254961318220667"/>
+<connection id="550" src-id="548" dest-id="292" weight="-1.1627977751562941"/>
+</chromosome>

@@ -1,0 +1,12 @@
+<chromosome id="7080" primary-parent-id="6700"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="6" src-id="2" dest-id="3" weight="-0.5554801522306021"/>
+<neuron id="289" type="hid" activation="sigmoid"/>
+<connection id="290" src-id="1" dest-id="289" weight="3.4183128977895625"/>
+<connection id="291" src-id="289" dest-id="3" weight="4.137302365992211"/>
+<neuron id="811" type="hid" activation="sigmoid"/>
+<connection id="812" src-id="0" dest-id="811" weight="1.7753563146994216"/>
+<connection id="813" src-id="811" dest-id="3" weight="-2.3536421202572826"/>
+</chromosome>

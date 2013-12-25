@@ -1,0 +1,18 @@
+<chromosome id="5181" primary-parent-id="4642"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="3.9275941211875605"/>
+<connection id="5" src-id="1" dest-id="3" weight="0.34425323982625367"/>
+<neuron id="292" type="hid" activation="sigmoid"/>
+<connection id="417" src-id="0" dest-id="292" weight="5.748768600996516"/>
+<neuron id="419" type="hid" activation="sigmoid"/>
+<connection id="420" src-id="292" dest-id="419" weight="6.155488774269741"/>
+<connection id="421" src-id="419" dest-id="3" weight="-3.4412795500700777"/>
+<connection id="545" src-id="1" dest-id="419" weight="-4.736488721612796"/>
+<neuron id="548" type="hid" activation="sigmoid"/>
+<connection id="549" src-id="2" dest-id="548" weight="6.866203961005172"/>
+<neuron id="1864" type="hid" activation="sigmoid"/>
+<connection id="1865" src-id="548" dest-id="1864" weight="-7.751553156768826"/>
+<connection id="1866" src-id="1864" dest-id="292" weight="-3.3504483869524435"/>
+</chromosome>

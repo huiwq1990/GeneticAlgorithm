@@ -1,0 +1,13 @@
+<chromosome id="7142" primary-parent-id="1949"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="-2.4066582796364413"/>
+<neuron id="289" type="hid" activation="sigmoid"/>
+<connection id="290" src-id="1" dest-id="289" weight="0.07743572063231774"/>
+<connection id="291" src-id="289" dest-id="3" weight="2.6859179343255977"/>
+<neuron id="292" type="hid" activation="sigmoid"/>
+<connection id="293" src-id="2" dest-id="292" weight="-0.8476736820632664"/>
+<connection id="294" src-id="292" dest-id="3" weight="-2.929440153819223"/>
+<connection id="1072" src-id="2" dest-id="289" weight="0.11823916678390933"/>
+</chromosome>

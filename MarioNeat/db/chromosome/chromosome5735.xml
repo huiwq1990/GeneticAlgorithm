@@ -1,0 +1,15 @@
+<chromosome id="5735" primary-parent-id="5309"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="1.5091283136281657"/>
+<connection id="5" src-id="1" dest-id="3" weight="-1.8920141320692143"/>
+<neuron id="292" type="hid" activation="sigmoid"/>
+<neuron id="419" type="hid" activation="sigmoid"/>
+<connection id="420" src-id="292" dest-id="419" weight="4.4133743649212995"/>
+<connection id="421" src-id="419" dest-id="3" weight="-2.144779893775383"/>
+<connection id="545" src-id="1" dest-id="419" weight="-5.5684008961989555"/>
+<neuron id="548" type="hid" activation="sigmoid"/>
+<connection id="549" src-id="2" dest-id="548" weight="0.7735593559018965"/>
+<connection id="550" src-id="548" dest-id="292" weight="-3.5786502344628084"/>
+</chromosome>
