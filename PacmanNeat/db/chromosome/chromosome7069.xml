@@ -1,0 +1,12 @@
+<chromosome id="7069" primary-parent-id="5217"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="0.8754761240322473"/>
+<connection id="5" src-id="1" dest-id="3" weight="-2.0516112289858"/>
+<neuron id="292" type="hid" activation="sigmoid"/>
+<connection id="293" src-id="2" dest-id="292" weight="2.5105980081099712"/>
+<neuron id="419" type="hid" activation="sigmoid"/>
+<connection id="420" src-id="292" dest-id="419" weight="1.2974612061233564"/>
+<connection id="421" src-id="419" dest-id="3" weight="-2.4757172162159504"/>
+</chromosome>
