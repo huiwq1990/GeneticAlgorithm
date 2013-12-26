@@ -138,6 +138,7 @@ public void clear() {
  * @throws IllegalArgumentException
  */
 public void setValues( double[] someValues ) throws IllegalArgumentException {
+	System.out.println(values.length);
 	if ( someValues.length != values.length )
 		throw new IllegalArgumentException( "can not change array dimension" );
 	values = someValues;
