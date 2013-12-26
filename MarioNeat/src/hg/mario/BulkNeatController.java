@@ -25,7 +25,7 @@ public class BulkNeatController extends BasicMarioAIAgent implements Agent{
 static private String name = "LargeMLPAgent";
 
  int numberOfOutputs = Environment.numberOfKeys;
- int numberOfInputs = 101;
+ int numberOfInputs = 28;
 
 
 private Activator activator;
@@ -43,18 +43,26 @@ public boolean[] getAction()
     byte[][] scene = levelScene;
     inputs = new double[101];
     int which = 0;
-    for (int i = -3; i < 4; i++)
+//    for (int i = -3; i < 4; i++)
+//    {
+//        for (int j = -3; j < 4; j++)
+//        {
+//            inputs[which++] = probe(i, j, scene);
+//        }
+//    }
+//    for (int i = -3; i < 4; i++)
+//    {
+//        for (int j = -3; j < 4; j++)
+//        {
+//            inputs[which++] = probe(i, j, enemies);
+//        }
+//    }
+    
+    for (int i = -2; i < 3; i++)
     {
-        for (int j = -3; j < 4; j++)
+        for (int j = -2; j < 3; j++)
         {
             inputs[which++] = probe(i, j, scene);
-        }
-    }
-    for (int i = -3; i < 4; i++)
-    {
-        for (int j = -3; j < 4; j++)
-        {
-            inputs[which++] = probe(i, j, enemies);
         }
     }
     inputs[inputs.length - 3] = isMarioOnGround ? 1 : 0;

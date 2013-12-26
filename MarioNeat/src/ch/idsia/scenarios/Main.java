@@ -40,6 +40,7 @@ public static void main(String[] args)
 {
 //        final String argsString = "-vis on";
     final MarioAIOptions marioAIOptions = new MarioAIOptions(args);
+    marioAIOptions.setLevelDifficulty(20);
 //        final Environment environment = new MarioEnvironment();
 //        final Agent agent = new ForwardAgent();
 //        final Agent agent = marioAIOptions.getAgent();
@@ -53,8 +54,8 @@ public static void main(String[] args)
 //                marioAIOptions.setLevelDifficulty(i);
 //                marioAIOptions.setLevelRandSeed(seed++);
     basicTask.setOptionsAndReset(marioAIOptions);
-//    basicTask.runSingleEpisode(1);
-    basicTask.doEpisodes(1,true,1);
+    basicTask.runSingleEpisode(1);
+//    basicTask.doEpisodes(1,false,1);
 //    System.out.println(basicTask.getEnvironment().getEvaluationInfoAsString());
 //            } while (basicTask.getEnvironment().getEvaluationInfo().marioStatus != Environment.MARIO_STATUS_WIN);
 //        }

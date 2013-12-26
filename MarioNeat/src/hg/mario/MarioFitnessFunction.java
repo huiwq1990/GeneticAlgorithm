@@ -17,8 +17,10 @@ import org.jgap.Chromosome;
 
 
 
+
 import ch.idsia.agents.Agent;
 import ch.idsia.agents.controllers.ForwardAgent;
+import ch.idsia.benchmark.mario.engine.GlobalOptions;
 import ch.idsia.benchmark.tasks.BasicTask;
 import ch.idsia.benchmark.tasks.MarioCustomSystemOfValues;
 import ch.idsia.tools.MarioAIOptions;
@@ -53,7 +55,7 @@ public class MarioFitnessFunction implements BulkFitnessFunction, Configurable {
 		while ( it.hasNext() ) {
 			Chromosome c = (Chromosome) it.next();
 			evaluate( c );
-			System.out.println(c.getFitnessValue());
+//			System.out.println(c.getFitnessValue());
 		}
 		
 		
@@ -64,10 +66,53 @@ public class MarioFitnessFunction implements BulkFitnessFunction, Configurable {
 	 * Evaluate chromosome and set fitness.
 	 * @param c
 	 */
+	public void evaluate( Chromosome c ) {
+//		System.out.println("evaluate");
+		try {
+			Activator activator = activatorFactory.newActivator(c);
+
+			Agent agent = new BulkNeatController(activator);
+//			 Agent agent = new ForwardAgent();
+			String[] args = {};
+			MarioAIOptions marioAIOptions = new MarioAIOptions(args);
+			
+			marioAIOptions.setVisualization(false);
+//			marioAIOptions.set
+			marioAIOptions.setAgent(agent);
+			marioAIOptions.setFPS(GlobalOptions.MaxFPS);
+			BasicTask basicTask = new BasicTask(marioAIOptions);
+			final MarioCustomSystemOfValues m = new MarioCustomSystemOfValues();
+			basicTask.setOptionsAndReset(marioAIOptions);
+//			basicTask.doEpisodes(1, false, 1);
+			basicTask.runSingleEpisode(1);
+			// System.out.println("\nEvaluationInfo: \n" +
+			// basicTask.getEnvironment().getEvaluationInfoAsString());
+			
+			double fitness = basicTask.getEnvironment().getEvaluationInfo()
+					.computeWeightedFitness(m);
+			
+//			System.out.println("fitness:" + fitness);
+			c.setFitnessValue((int) fitness);
+		}
+		catch ( Throwable e ) {
+//			logger.warn( "error evaluating chromosome " + c.toString(), e );
+			c.setFitnessValue( 0 );
+			System.out.println(e);
+		}
+	}
+	
+	
+	
 //	public void evaluate( Chromosome c ) {
 //		System.out.println("evaluate");
-//		try {
-//			Activator activator = activatorFactory.newActivator(c);
+//	
+//			Activator activator = null;
+//			try {
+//				activator = activatorFactory.newActivator(c);
+//			} catch (TranscriberException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
 //
 //			Agent agent = new BulkNeatController(activator);
 ////			 Agent agent = new ForwardAgent();
@@ -88,48 +133,8 @@ public class MarioFitnessFunction implements BulkFitnessFunction, Configurable {
 //			
 //			System.out.println("fitness:" + fitness);
 //			c.setFitnessValue((int) fitness);
-//		}
-//		catch ( Throwable e ) {
-////			logger.warn( "error evaluating chromosome " + c.toString(), e );
-//			c.setFitnessValue( 0 );
-//			System.out.println(e);
-//		}
+//		
 //	}
-//	
-//	
-	
-	public void evaluate( Chromosome c ) {
-		System.out.println("evaluate");
-	
-			Activator activator = null;
-			try {
-				activator = activatorFactory.newActivator(c);
-			} catch (TranscriberException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-			Agent agent = new BulkNeatController(activator);
-//			 Agent agent = new ForwardAgent();
-			String[] args = {};
-			MarioAIOptions marioAIOptions = new MarioAIOptions(args);
-			BasicTask basicTask = new BasicTask(marioAIOptions);
-			marioAIOptions.setVisualization(false);
-			marioAIOptions.setAgent(agent);
-
-			final MarioCustomSystemOfValues m = new MarioCustomSystemOfValues();
-
-			basicTask.doEpisodes(1, false, 1);
-			// System.out.println("\nEvaluationInfo: \n" +
-			// basicTask.getEnvironment().getEvaluationInfoAsString());
-			
-			double fitness = basicTask.getEnvironment().getEvaluationInfo()
-					.computeWeightedFitness(m);
-			
-			System.out.println("fitness:" + fitness);
-			c.setFitnessValue((int) fitness);
-		
-	}
 	
 	
 	
