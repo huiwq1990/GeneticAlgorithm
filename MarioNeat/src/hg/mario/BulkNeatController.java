@@ -1,7 +1,5 @@
-package hg.pacman;
+package hg.mario;
 
-import itu.jgdiejuu.torcs.Action;
-import itu.jgdiejuu.torcs.NEATController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,17 +19,13 @@ import ch.idsia.evolution.MLP;
 import com.anji.integration.Activator;
 import com.anji.integration.ActivatorTranscriber;
 
-import dataRecording.DataTuple;
-import pacman.controllers.Controller;
-import pacman.game.Game;
-import pacman.game.Constants.MOVE;
 
 public class BulkNeatController extends BasicMarioAIAgent implements Agent{
 
 static private String name = "LargeMLPAgent";
 
-final int numberOfOutputs = Environment.numberOfKeys;
-final int numberOfInputs = 101;
+ int numberOfOutputs = Environment.numberOfKeys;
+ int numberOfInputs = 28;
 
 
 private Activator activator;
@@ -47,20 +41,28 @@ public boolean[] getAction()
 {
     double[] inputs;// = new double[numberOfInputs];
     byte[][] scene = levelScene;
-    inputs = new double[numberOfInputs];
+    inputs = new double[101];
     int which = 0;
-    for (int i = -3; i < 4; i++)
+//    for (int i = -3; i < 4; i++)
+//    {
+//        for (int j = -3; j < 4; j++)
+//        {
+//            inputs[which++] = probe(i, j, scene);
+//        }
+//    }
+//    for (int i = -3; i < 4; i++)
+//    {
+//        for (int j = -3; j < 4; j++)
+//        {
+//            inputs[which++] = probe(i, j, enemies);
+//        }
+//    }
+    
+    for (int i = -2; i < 3; i++)
     {
-        for (int j = -3; j < 4; j++)
+        for (int j = -2; j < 3; j++)
         {
             inputs[which++] = probe(i, j, scene);
-        }
-    }
-    for (int i = -3; i < 4; i++)
-    {
-        for (int j = -3; j < 4; j++)
-        {
-            inputs[which++] = probe(i, j, enemies);
         }
     }
     inputs[inputs.length - 3] = isMarioOnGround ? 1 : 0;
@@ -71,22 +73,20 @@ public boolean[] getAction()
 }
 
 private boolean[] convertOutput(double[] outputs) {
-	
-	int bestIndex = -1;
-	double bestValue = Double.NEGATIVE_INFINITY;
+	boolean[] returnVal = new boolean[numberOfOutputs];;
 	
 	for (int i = 0; i < outputs.length; i++) {
-		if (outputs[i] > bestValue) {
-//			bestValue = outputs[i];
-			bestValue = clamp(outputs[i],0,1);
-			bestIndex = i;
+		if (outputs[i] > 0.5) {
+			returnVal[i] = true;
 		}
 	}
 	
-	if (bestIndex == 0) { return MOVE.UP; }
-	if (bestIndex == 1) { return MOVE.RIGHT; }
-	if (bestIndex == 2) { return MOVE.DOWN; }
-	return MOVE.LEFT; // i == 3
+	return returnVal;
+	
+//	if (bestIndex == 0) { return MOVE.UP; }
+//	if (bestIndex == 1) { return MOVE.RIGHT; }
+//	if (bestIndex == 2) { return MOVE.DOWN; }
+//	return MOVE.LEFT; // i == 3
 
 }
 
