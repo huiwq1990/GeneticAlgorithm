@@ -1,0 +1,8 @@
+<chromosome id="1228" primary-parent-id="1144" secondary-parent-id="1036"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="0.5141082301010098"/>
+<connection id="5" src-id="1" dest-id="3" weight="-1.838407930564896"/>
+<connection id="6" src-id="2" dest-id="3" weight="-0.3400511801262926"/>
+</chromosome>

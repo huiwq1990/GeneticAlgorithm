@@ -1,0 +1,10 @@
+<chromosome id="1294" primary-parent-id="1096" secondary-parent-id="973"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="0.38829227287717105"/>
+<connection id="6" src-id="2" dest-id="3" weight="0.28784622486542766"/>
+<neuron id="795" type="hid" activation="sigmoid"/>
+<connection id="796" src-id="1" dest-id="795" weight="0.38022712961191707"/>
+<connection id="797" src-id="795" dest-id="3" weight="-1.5401318616893247"/>
+</chromosome>

@@ -1,0 +1,14 @@
+<chromosome id="1027" primary-parent-id="799"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="5" src-id="1" dest-id="3" weight="-1.945845169362983"/>
+<connection id="6" src-id="2" dest-id="3" weight="-0.1496781594342571"/>
+<neuron id="418" type="hid" activation="sigmoid"/>
+<connection id="420" src-id="418" dest-id="3" weight="1.0035063841496223"/>
+<neuron id="544" type="hid" activation="sigmoid"/>
+<connection id="546" src-id="544" dest-id="418" weight="7.4947018652299064"/>
+<neuron id="668" type="hid" activation="sigmoid"/>
+<connection id="669" src-id="0" dest-id="668" weight="2.473498172943396"/>
+<connection id="670" src-id="668" dest-id="544" weight="-0.5831243198299139"/>
+</chromosome>

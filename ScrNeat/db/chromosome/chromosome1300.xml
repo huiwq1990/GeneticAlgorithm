@@ -1,0 +1,12 @@
+<chromosome id="1300" primary-parent-id="1039" secondary-parent-id="965"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="5" src-id="1" dest-id="3" weight="4.112408909775619"/>
+<neuron id="167" type="hid" activation="sigmoid"/>
+<connection id="168" src-id="2" dest-id="167" weight="4.007334024892237"/>
+<connection id="169" src-id="167" dest-id="3" weight="-2.6951499100615086"/>
+<neuron id="418" type="hid" activation="sigmoid"/>
+<connection id="419" src-id="0" dest-id="418" weight="2.69057970035908"/>
+<connection id="420" src-id="418" dest-id="3" weight="-3.9770723682174594"/>
+</chromosome>
