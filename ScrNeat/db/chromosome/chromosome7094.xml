@@ -1,0 +1,15 @@
+<chromosome id="7094" primary-parent-id="6268"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="5" src-id="1" dest-id="3" weight="-1.0522994061054445"/>
+<neuron id="292" type="hid" activation="sigmoid"/>
+<connection id="293" src-id="2" dest-id="292" weight="2.5468197538847384"/>
+<neuron id="419" type="hid" activation="sigmoid"/>
+<connection id="420" src-id="292" dest-id="419" weight="2.1545684748314375"/>
+<connection id="421" src-id="419" dest-id="3" weight="-1.168370747475098"/>
+<connection id="545" src-id="1" dest-id="419" weight="1.6731926270441924"/>
+<neuron id="811" type="hid" activation="sigmoid"/>
+<connection id="812" src-id="0" dest-id="811" weight="0.021497730801765036"/>
+<connection id="813" src-id="811" dest-id="3" weight="5.886231022205114"/>
+</chromosome>

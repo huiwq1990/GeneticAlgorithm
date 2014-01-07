@@ -1,21 +1,14 @@
 package hg.pacman;
 
-import static pacman.game.Constants.DELAY;
-
-import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
-import java.util.concurrent.Executor;
 
 import org.jgap.BulkFitnessFunction;
 import org.jgap.Chromosome;
 
 import pacman.controllers.Controller;
 import pacman.controllers.examples.StarterGhosts;
-import pacman.controllers.examples.StarterPacMan;
-import pacman.game.Game;
 import pacman.game.Constants.GHOST;
 import pacman.game.Constants.MOVE;
 

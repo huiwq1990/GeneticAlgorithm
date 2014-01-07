@@ -1,0 +1,18 @@
+<chromosome id="7129" primary-parent-id="6123"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="5" src-id="1" dest-id="3" weight="1.3795743446299695"/>
+<neuron id="292" type="hid" activation="sigmoid"/>
+<connection id="417" src-id="0" dest-id="292" weight="5.35061208663492"/>
+<neuron id="419" type="hid" activation="sigmoid"/>
+<connection id="420" src-id="292" dest-id="419" weight="9.566621042859321"/>
+<connection id="421" src-id="419" dest-id="3" weight="-1.341270423383982"/>
+<connection id="545" src-id="1" dest-id="419" weight="-1.3706103326200219"/>
+<neuron id="548" type="hid" activation="sigmoid"/>
+<connection id="549" src-id="2" dest-id="548" weight="-2.6661213470722576"/>
+<connection id="550" src-id="548" dest-id="292" weight="3.6993346118979513"/>
+<neuron id="811" type="hid" activation="sigmoid"/>
+<connection id="812" src-id="0" dest-id="811" weight="1.1329758685293596"/>
+<connection id="813" src-id="811" dest-id="3" weight="3.1501046594231337"/>
+</chromosome>

@@ -1,16 +1,6 @@
 package hg.pacman;
 
-import itu.jgdiejuu.torcs.Action;
-import itu.jgdiejuu.torcs.NEATController;
-
-import java.util.ArrayList;
-import java.util.List;
-
-
-import org.jgap.Chromosome;
-
 import com.anji.integration.Activator;
-import com.anji.integration.ActivatorTranscriber;
 
 import dataRecording.DataTuple;
 import pacman.controllers.Controller;
@@ -18,17 +8,7 @@ import pacman.game.Game;
 import pacman.game.Constants.MOVE;
 
 public class BulkNeatController extends Controller<MOVE>{
-	
-	
-private ArrayList<Integer> fitnesses;
-	
-	private List<Chromosome> genotypes;
-	private NEATController controller = null;
-	private int curStep = 0;
-	private int curGene = 0;
 
-	private ActivatorTranscriber factory;
-	
 	private Activator activator;
 
 	public BulkNeatController(Activator activator){

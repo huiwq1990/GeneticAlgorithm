@@ -1,0 +1,17 @@
+<chromosome id="7146" primary-parent-id="4719"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="-1.8855664235998177"/>
+<connection id="5" src-id="1" dest-id="3" weight="1.320473024147894"/>
+<neuron id="292" type="hid" activation="sigmoid"/>
+<connection id="293" src-id="2" dest-id="292" weight="0.9846549034118652"/>
+<neuron id="419" type="hid" activation="sigmoid"/>
+<connection id="420" src-id="292" dest-id="419" weight="2.0209159019438316"/>
+<connection id="421" src-id="419" dest-id="3" weight="0.3321698045626522"/>
+<neuron id="548" type="hid" activation="sigmoid"/>
+<connection id="550" src-id="548" dest-id="292" weight="-0.8005625875271545"/>
+<neuron id="808" type="hid" activation="sigmoid"/>
+<connection id="809" src-id="2" dest-id="808" weight="4.207201843534914"/>
+<connection id="810" src-id="808" dest-id="548" weight="4.2850309327822576"/>
+</chromosome>

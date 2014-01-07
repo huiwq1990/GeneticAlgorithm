@@ -1,0 +1,18 @@
+<chromosome id="7127" primary-parent-id="6999"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="0.6057026607397571"/>
+<connection id="5" src-id="1" dest-id="3" weight="2.066180038199912"/>
+<neuron id="292" type="hid" activation="sigmoid"/>
+<connection id="293" src-id="2" dest-id="292" weight="-2.922520987468255"/>
+<neuron id="419" type="hid" activation="sigmoid"/>
+<connection id="420" src-id="292" dest-id="419" weight="-0.8126624527234034"/>
+<connection id="421" src-id="419" dest-id="3" weight="-1.619325304166637"/>
+<connection id="545" src-id="1" dest-id="419" weight="-7.628823689311902"/>
+<connection id="680" src-id="0" dest-id="419" weight="-3.6177699778488495"/>
+<neuron id="1205" type="hid" activation="sigmoid"/>
+<connection id="1206" src-id="0" dest-id="1205" weight="-2.3684604154920654"/>
+<connection id="1207" src-id="1205" dest-id="292" weight="-2.9977252706004758"/>
+<connection id="1859" src-id="1" dest-id="1205" weight="-2.879770534989077"/>
+</chromosome>
