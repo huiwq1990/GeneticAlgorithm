@@ -1,0 +1,71 @@
+<run name="testrun" timedatestamp="[20140107 16:12:16 - 20140107 16:20:52]" >
+<search-parameters>
+<population-size>50</population-size>
+<generations>60</generations>
+</search-parameters>
+<generation id="1" >
+<fitness>
+<max>19</max>
+<min>1</min>
+<avg>1</avg>
+</fitness>
+<complexity>
+<champ>99</champ>
+<max>99</max>
+<min>99</min>
+<avg>99.0</avg>
+</complexity>
+<specie id="198" count="50">
+<chromosome id="198" fitness="1" />
+<chromosome id="199" fitness="1" />
+<chromosome id="200" fitness="1" />
+<chromosome id="201" fitness="1" />
+<chromosome id="202" fitness="1" />
+<chromosome id="203" fitness="1" />
+<chromosome id="204" fitness="1" />
+<chromosome id="205" fitness="1" />
+<chromosome id="206" fitness="1" />
+<chromosome id="207" fitness="1" />
+<chromosome id="208" fitness="1" />
+<chromosome id="209" fitness="1" />
+<chromosome id="210" fitness="1" />
+<chromosome id="211" fitness="1" />
+<chromosome id="212" fitness="1" />
+<chromosome id="213" fitness="1" />
+<chromosome id="214" fitness="1" />
+<chromosome id="215" fitness="1" />
+<chromosome id="216" fitness="1" />
+<chromosome id="217" fitness="1" />
+<chromosome id="218" fitness="1" />
+<chromosome id="219" fitness="1" />
+<chromosome id="220" fitness="1" />
+<chromosome id="221" fitness="1" />
+<chromosome id="222" fitness="1" />
+<chromosome id="223" fitness="1" />
+<chromosome id="224" fitness="1" />
+<chromosome id="225" fitness="1" />
+<chromosome id="226" fitness="1" />
+<chromosome id="227" fitness="1" />
+<chromosome id="228" fitness="19" />
+<chromosome id="229" fitness="1" />
+<chromosome id="230" fitness="1" />
+<chromosome id="231" fitness="1" />
+<chromosome id="232" fitness="1" />
+<chromosome id="233" fitness="1" />
+<chromosome id="234" fitness="1" />
+<chromosome id="235" fitness="1" />
+<chromosome id="236" fitness="1" />
+<chromosome id="237" fitness="1" />
+<chromosome id="238" fitness="1" />
+<chromosome id="239" fitness="1" />
+<chromosome id="240" fitness="1" />
+<chromosome id="241" fitness="1" />
+<chromosome id="242" fitness="1" />
+<chromosome id="243" fitness="1" />
+<chromosome id="244" fitness="1" />
+<chromosome id="245" fitness="1" />
+<chromosome id="246" fitness="1" />
+<chromosome id="247" fitness="1" />
+</specie>
+</generation>
+</run>
