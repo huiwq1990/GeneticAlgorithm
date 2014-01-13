@@ -1,8 +1,0 @@
-<chromosome id="864" primary-parent-id="14"><neuron id="0" type="in" activation="linear"/>
-<neuron id="1" type="in" activation="linear"/>
-<neuron id="2" type="in" activation="linear"/>
-<neuron id="3" type="out" activation="sigmoid"/>
-<connection id="4" src-id="0" dest-id="3" weight="0.6679460971435043"/>
-<connection id="5" src-id="1" dest-id="3" weight="-0.6462081374663831"/>
-<connection id="6" src-id="2" dest-id="3" weight="-0.3339846134185791"/>
-</chromosome>

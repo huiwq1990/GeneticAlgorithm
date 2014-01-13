@@ -7,7 +7,7 @@ public class ActivatorPacman {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		String[] parms = {"pacman.properties","9225"};
+		String[] parms = {"torcs.properties","1039"};
 		
 		NeatActivator.main(parms);
 	}

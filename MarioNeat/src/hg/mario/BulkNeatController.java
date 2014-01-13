@@ -41,7 +41,7 @@ public boolean[] getAction()
 {
     double[] inputs;// = new double[numberOfInputs];
     byte[][] scene = levelScene;
-    inputs = new double[101];
+    inputs = new double[numberOfInputs];
     int which = 0;
 //    for (int i = -3; i < 4; i++)
 //    {

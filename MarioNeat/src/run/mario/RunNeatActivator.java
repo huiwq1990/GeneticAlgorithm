@@ -7,7 +7,7 @@ public class RunNeatActivator {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		String[] parms = {"xor.properties","7051"};
+		String[] parms = {"mario.properties","7253"};
 		
 		NeatActivator.main(parms);
 	}
