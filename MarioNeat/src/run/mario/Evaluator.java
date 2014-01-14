@@ -20,7 +20,7 @@ public class Evaluator {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 
-		String[] parms = {"mario.properties","7253"};		
+		String[] parms = {"mario.properties","125559"};		
 		args = parms;
 		
 		MarioFitnessFunction ff = new MarioFitnessFunction();
